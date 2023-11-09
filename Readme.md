@@ -1,4 +1,4 @@
 # readme
 Spotify clone
 
-first change from local 
+Created Spotiy clone using html and css
