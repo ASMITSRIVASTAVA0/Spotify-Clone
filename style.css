@@ -1,0 +1,302 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin:0px;
+    background-color:#000;
+    color:#fff;
+    /*  jb content jyada tb overflow ab usko hidden y visible y clip y scroll y auto rkh skte*/
+    overflow:hidden;
+    /* hm chahte ki main body scoll n ho bs main content scroll ho */
+
+}
+.main{
+    display:flex;
+    height:100vh;
+    padding:0.rem;
+    /* pure viewport me dikhna chahiye */
+}
+.sidebar{
+    background-color:#000;
+    width:340px;
+    margin-right:0.5rem;
+
+}
+.main_content{
+    background-color:#121212;
+    flex:1;
+    /* mtlb bachi hui sari jagah de do */
+    border-radius:1rem;
+    /* sirf yaha scroll bar chahiye */
+    overflow:auto;
+    /* auto se jb need hogi tb dikhai dega */
+    padding:0 1.5rem 0 1.5rem;
+}
+.music-player{
+    background-color:#000;
+    position:fixed;
+    /* neeche fix rhe */
+    bottom:0px;
+    /* neeche rhe to bottom */
+    width:100%;
+    height:72px;
+    /* yaad rhe ki ye override ho rha baki div me */
+}
+a{
+    text-decoration:none;
+    color:#fff;
+}
+.nav{
+    background-color:#121212;
+    border-radius:1rem;
+        /* 1rem=16px aur jb size chota hoga to radius chage hota rhega */
+    display:flex;
+    /* nav ke andar jo navoption h unko flex me */
+    /* then column me rhko */
+    flex-direction:column;
+    justify-content:center;
+    /* jo navoption h unko nav ke center me rkho */
+    height:100px;
+    padding:0.5rem 0.75rem;
+    /* nav ke andar jo content h(navoption) vo aur nav ke beech ki doori */
+    z-index:10;
+    /* taki ye sbke upar rhe */
+}
+.nav-option{
+    line-height:2.5rem;
+    /* ek line 2.5rem legi */
+    opacity:0.7;
+    padding:0.5rem 0.75;
+    /* 0.5rem==8px */
+}
+.nav-option:hover{
+    opacity:1;
+}
+.nav-option i{
+    font-size:1.25rem;
+}
+.nav-option a{
+    font-size:1rem;
+    padding-left:1rem;
+    /* taki logo text door rhe */
+}
+
+.library{
+    background-color:#121212;
+    border-radius:1rem;
+    height:100%;
+    margin-top:0.5rem;
+    padding:0.rem 0.7rem;
+}
+.options{
+    /* includeslib-option,icon,icon */
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lib-option img{
+    /* same s */
+    height:1.2rem;
+    width:1.2rem;
+}
+.icon i{
+    font-size:1.25rem;
+    opacity:0.7;
+    margin-right:1rem;
+}
+.icon i:hover{
+    opacity:1;
+}
+
+.box{
+    background-color:#232323;
+    height:8rem;
+    border-radius:0.7rem;
+    margin:0.75rem 0 1.75rem 0;
+    padding:0.75rem 1.25rem;
+
+}
+.box-p1{
+    font-size:1rem;
+    font-weight:700;
+}
+.box-p2{
+    font-size:0.8rem;
+    opacity:0.9;
+}
+.badge{
+    background-color:#fff;
+    border:none;
+    border-radius:100px;
+    padding:0.25rem 1rem;
+    /* button ke andar content ki padding jisse button bda hua */
+    font-weight:700;
+    margin-top:0.5rem;
+    height:2rem;
+    width:fit-content;
+}
+
+.sticky-nav{
+    position:sticky;
+    /* taki upar fix rhe */
+    top:0px;
+    background-color:#121212;
+    display:flex;
+    justify-content:space-between;
+    /* is nav ke andar do div rhe jo corner me chle gye */
+    align-items:center;
+    padding:1rem 0rem 1rem 0rem;
+    /* padding se nav div ke andar jo do div h unko spacing di */
+}
+.sticky-nav-icon{
+    margin-left:0.75rem;
+}
+.sticky-nav-option{
+    display:flex;
+    justify-content:center;
+    text-align:center;
+}
+.sticky-nav-option .nav-item {
+    margin-right:1rem;
+}
+.sticky-nav-option .user-icon{
+    margin-top:1rem;
+}
+.dark-badge{
+    background-color:black;
+    /* border:1px solid white; */
+    color:white;
+}
+/* chle n rha media  */
+@media (max-width: 100px) {
+    .hide {
+        display:none;
+        /* background-color: aquamarine; */
+    }
+}
+.cards-container{
+    display:flex;
+    flex-wrap:wrap;
+}
+.card{
+    background-color:#232323;
+    width:150px;
+    border-radius:0.5rem;
+    padding:1.5rem;
+    margin:1.5rem;
+}
+.card-img{
+    width:100%;
+    border-radius:0.5rem;
+}
+.card-title{
+    font-weight:600;
+}
+.card-info{
+    font-size:0.8rem;
+    opacity:0.5;
+}
+
+.footer{
+    height:300px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.line{
+    width:90%;
+    height:50%;
+    border-top:1px solid white;
+    opacity:0.4;
+
+}
+.music-player{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.album{
+    width:25%;
+}
+.player{
+    /* eski andar 2div unko display flex n diya */
+    width:50%;
+    /* justify-content:space-evenly; */
+}
+.control{
+    width:25%;
+}
+.player-control{
+    display:flex;
+    justify-content:center;
+    /* phir margin deke door door kr dege */
+    align-items:center;
+}
+.player-control-icon{
+    /* font-size:1rem; */
+    height:1rem;
+    margin-right:1.75rem;
+    opacity:0.7;
+}
+.player-control-icon:hover{
+    opacity:1;
+}
+.playback-bar{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.progress-bar{
+    width:70%;
+    appearance:none;
+    /* ya auto jisse waisa hi */
+    /* taki jo by default css add hoke aati h vo ht jaye*/
+    background-color:transparent;
+    /* background color jaise hi */
+    cursor:pointer;
+}
+/* progress bar consist of track and thumb */
+.progress-bar::-webkit-slider-runnable-track{
+    background-color:#ddd;
+    border-radius:100px;
+    height:0.2rem;
+}
+.progress-bar::-webkit-slider-thumb{
+    appearance:none;
+    height:1rem;
+    width:1rem;
+    background-color:#1bd760;
+    border-radius:100%;
+    margin-top:-0.5rem;
+}
+
+
+
+
+.album{
+    display:flex;
+}
+.album-pic{
+    height:4rem;
+    width:4rem;
+}
+.song-name{
+    font-weight:700;
+    margin-top:0.5rem;
+    margin-left:0.5rem;
+}
+.singer{
+    opacity:0.7;
+    margin-top:0.1rem;
+    margin-left:0.5rem;
+}
+.control{
+    display:flex;
+    flex-direction:row-reverse;
+}
+.control-icon{
+    font-size:1.5rem;
+    margin:1rem;
+    opacity: 0.7;
+}
+.control-icon:hover{
+    opacity:1;
+}
