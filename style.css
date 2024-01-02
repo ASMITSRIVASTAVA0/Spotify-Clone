@@ -166,10 +166,23 @@ a{
     color:white;
 }
 /* chle n rha media  */
-@media (max-width: 100px) {
+@media (max-width: 650px) {
     .hide {
-        display:none;
+        /* display:none; */
         /* background-color: aquamarine; */
+    }
+    .sidebar{
+        display: none;
+    }
+    .control i{
+        display: none;
+    }
+    .player-control-icon-1{
+        display:none;
+
+    }
+    .album img{
+        display: none;
     }
 }
 .cards-container{
